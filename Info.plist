@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Author</key>
+	<string>giginet</string>
+	<key>CFBundleDisplayName</key>
+	<string>HatenaBookmark</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.giginet.hatenabookmark</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>Chrome</key>
+	<dict>
+		<key>Global Page</key>
+		<string>global.html</string>
+	</dict>
+	<key>Content</key>
+	<dict>
+		<key>Blacklist</key>
+		<array>
+			<string>http://b.hatena.ne.jp/*/add*</string>
+		</array>
+		<key>Scripts</key>
+		<dict>
+			<key>End</key>
+			<array>
+				<string>hb.js</string>
+			</array>
+			<key>Start</key>
+			<array>
+				<string>jquery-1.4.2.min.js</string>
+				<string>jquery.hotkeys-0.7.9.min.js</string>
+				<string>jquery.lightbox_me.js</string>
+				<string>jquery-ui-1.8.2.custom.min.js</string>
+				<string>st.js</string>
+			</array>
+		</dict>
+		<key>Stylesheets</key>
+		<array>
+			<string>style.css</string>
+		</array>
+	</dict>
+	<key>Description</key>
+	<string>Safariからはてブ追加！</string>
+	<key>ExtensionInfoDictionaryVersion</key>
+	<string>1.0</string>
+	<key>Permissions</key>
+	<dict>
+		<key>Website Access</key>
+		<dict>
+			<key>Level</key>
+			<string>All</string>
+		</dict>
+	</dict>
+	<key>Update Manifest URL</key>
+	<string>http://gigi-net.net/safari/hbsafari.plist</string>
+	<key>Website</key>
+	<string>http://d.hatena.ne.jp/gigi-net/20100624/hbsafari</string>
+</dict>
+</plist>

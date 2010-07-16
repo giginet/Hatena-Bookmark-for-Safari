@@ -1,0 +1,81 @@
+#HBcommentViewer,#HBtool{
+    color:#FFFFFF;
+    font-size:13px;
+    z-index:10000;
+    text-align:left;
+    float:left !important;
+    display:block;
+    /*width:600px;*/
+    position:fixed;
+    /*right:0 !important;
+    bottom:0 !important;*/
+    padding:4px;
+    margin:0px;
+    display:block;
+    -webkit-border-radius:12px;
+    -webkit-box-shadow: #000000 0px 0px 10px;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(25,25,25,0.6)), to(rgba(50,50,50,0.9))) !important;
+    /*background-color:#444444;*/
+}
+#HBcommentViewer{
+    overflow-x:hidden;
+    overflow-y:scroll;
+    padding:10px !important;
+}
+.HBtime{
+    font-size:12px;
+    color:gray;
+    display:inline;
+}
+.HBcomment{
+    font-size:13px;
+}
+a.HBuser{
+    color:#FFFFFF;
+    font-size:13px;
+    padding: 0px 0px 0px 20px !important;
+    font-weight:bold !important;
+    text-decoration:underline !important;
+}
+a.HBuser:link,a.HBuser:visited {
+    color:#FFFFFF !important;
+}
+a.HBuser:hover {
+    color:red !important;
+}
+.ui-resizable-n{
+    top: -5px;
+    cursor: n-resize;
+    height: 15px;
+    left: 0px;
+    width: 100%;
+}
+.ui-resizable-nw{
+    top:0px;
+    left:0px;
+    height:15px;
+    width:15px;
+    cursor:nw-resize;
+    z-index:99999;
+}
+.ui-resizable-w{
+    cursor: w-resize;
+    height: 100%;
+    left: -5px;
+    top: 0px;
+    width: 15px;
+}
+
+.ui-resizable-handle{
+    display: block;
+    font-size: 0.1px;
+    position: absolute;
+    z-index: 99998;
+}
+#HBtool{
+    height:75px;
+    width:75px;
+}
+#HBcounter{
+    padding: 0px 0px 0px 18px !important;
+}
