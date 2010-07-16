@@ -5,10 +5,17 @@
     text-align:left;
     float:left !important;
     display:block;
+<<<<<<< HEAD
     /*width:600px;*/
     position:fixed;
     /*right:0 !important;
     bottom:0 !important;*/
+=======
+    width:600px;
+    position:fixed;
+    right:0 !important;
+    bottom:0 !important;
+>>>>>>> 344176d9d3fceee4591223e7375a56a06c8874ee
     padding:4px;
     margin:0px;
     display:block;

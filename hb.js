@@ -1,17 +1,29 @@
 if(window.top==window){
+<<<<<<< HEAD
     var post =["","",0,0];
     var posr =[0,"",0,""];
     var posl =["",0,"",0];
     var posb =[0,0,"",""];
+=======
+>>>>>>> 344176d9d3fceee4591223e7375a56a06c8874ee
     var flag = false
     var count = 0;
     var haveComment = false;
     var toggleViewer = false;
+<<<<<<< HEAD
     var rooturl = safari.extension.baseURI;
     //はてぶついか
     var showAddForm = function(){
         var base = "http://b.hatena.ne.jp/add"
         if(location.href.indexOf(base)==-1){
+=======
+    var rooturl = "";
+    //はてブついか
+    $(document).bind("keydown","ctrl+b",function(){
+        var base = "http://b.hatena.ne.jp/add"
+        if(location.href.indexOf(base)==-1){
+            console.log("press!");
+>>>>>>> 344176d9d3fceee4591223e7375a56a06c8874ee
             var url=base+'?mode=confirm&is_bm=1&title='+escape(document.title)+'&url='+escape(location.href);
             var popup = $("<div></div>");
             popup.attr("id","hb-add");
@@ -23,18 +35,35 @@ if(window.top==window){
             iframe.width(500);
             popup.lightbox_me();
         }
+<<<<<<< HEAD
     }
     var api;
     var viewer = $("<div></div>");
     var tooltip = $("<div></div>");
     var counter = $("<span></span>");
+=======
+    });
+    var api;
+    var viewer = $("<div></div>");
+    var tooltip = $("<div></div>");
+    tooltip.attr("id","HBtool"); 
+    var counter = $("<span></span>");
+    counter.attr("id","HBcounter");
+    tooltip.append(counter);
+>>>>>>> 344176d9d3fceee4591223e7375a56a06c8874ee
     //ツールチップ表示
     function showTooltip(){
         counter.css({"background":"url("+rooturl+"hatena.png) no-repeat scroll 0pt 50% transparent"});
         counter.html(count);
     }
     tooltip.bind("mouseenter",function(){
+<<<<<<< HEAD
         if(haveComment && !toggleViewer){
+=======
+        console.log(toggleViewer);
+        if(haveComment && !toggleViewer){
+            console.log("open");
+>>>>>>> 344176d9d3fceee4591223e7375a56a06c8874ee
             toggleViewer = true;
             viewer.toggle(200);
             tooltip.toggle(200);
@@ -53,11 +82,14 @@ if(window.top==window){
             api = evt.message;
             if(api!=null){
                 viewer.attr("id","HBcommentViewer");
+<<<<<<< HEAD
                 //ビュワー表示位置
                 viewer.css("top",post[setting.position]+" !important");
                 viewer.css("right",posr[setting.position]+" !important");
                 viewer.css("left",posl[setting.position]+" !important");
                 viewer.css("bottom",posb[setting.position]+" !important");
+=======
+>>>>>>> 344176d9d3fceee4591223e7375a56a06c8874ee
                 count = api.count;
                 jQuery.each(api.bookmarks,function(){
                     var user = this.user;
@@ -72,22 +104,34 @@ if(window.top==window){
                         var link = com.children("a.HBuser:first");
                         link.css({"background":"url("+image_url+") no-repeat scroll 0pt 50% transparent"});
                         com.attr("class","HBcomment");
+<<<<<<< HEAD
                         viewer.width(setting.width);
+=======
+>>>>>>> 344176d9d3fceee4591223e7375a56a06c8874ee
                         viewer.append(com);
                     }
                 });
                 if(com_count>0){
                     haveComment = true;
                     $(document.body).append(viewer);
+<<<<<<< HEAD
                     if(viewer.height()<setting.height){
                         viewer.height(viewer.height()+10);
                     }else{
                         viewer.height(setting.height)
+=======
+                    if(viewer.height()<300){
+                        console.log(viewer.height());
+                        viewer.height(viewer.height()+10);
+                    }else{
+                        viewer.height(300)
+>>>>>>> 344176d9d3fceee4591223e7375a56a06c8874ee
                     }
                     viewer.toggle(false);
                 }
             }
             showTooltip();
+<<<<<<< HEAD
         }else if(evt.name=="setting"){
             setting = evt.message;
             //tooltipの設置
@@ -115,4 +159,20 @@ if(window.top==window){
     //設定の読み込み
     var setting;
     safari.self.tab.dispatchMessage("setting",location.href);
+=======
+        }else if(evt.name=="root"){
+            rooturl = evt.message;                
+            counter.css({"background":"url("+rooturl+"loading.gif) no-repeat scroll 0pt 50% transparent"});
+            counter.html("loading...");
+            $(document.body).append(tooltip);
+        }
+    },false);
+
+    if(!flag){
+        safari.self.tab.dispatchMessage('api',location.href); // Global Pageに送信
+        flag = true;
+    }
+
+    safari.self.tab.dispatchMessage('root',0); // Global Pageに送信
+>>>>>>> 344176d9d3fceee4591223e7375a56a06c8874ee
 }
