@@ -11,7 +11,7 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>1.1</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>Chrome</key>
@@ -46,11 +46,7 @@
 		</array>
 	</dict>
 	<key>Description</key>
-<<<<<<< HEAD
-	<string>Safariからはてブ追加！</string>
-=======
 	<string>Safariからはてブ追加！（β）</string>
->>>>>>> 344176d9d3fceee4591223e7375a56a06c8874ee
 	<key>ExtensionInfoDictionaryVersion</key>
 	<string>1.0</string>
 	<key>Permissions</key>
