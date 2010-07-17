@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 var regexps = [];
 //ブラックリストの正規表現リスト
@@ -17,6 +18,13 @@ function initAll(){
     safari.application.addEventListener('message',function(evt){
         if(evt.name=="api"){
             if(!isDisable(evt.message)){
+=======
+function initAll(){
+    safari.application.addEventListener('message',function(evt){
+        if(evt.name=="api"){
+            var urlreg = new RegExp("^http:\/\/.*");
+            if(urlreg.test(evt.message)){
+>>>>>>> 344176d9d3fceee4591223e7375a56a06c8874ee
                 var api="http://b.hatena.ne.jp/entry/jsonlite/?url="+evt.message;
                 $.getJSON(api,function(data){
                     evt.target.page.dispatchMessage('api', data);
@@ -24,6 +32,7 @@ function initAll(){
             }else{
                 evt.target.page.dispatchMessage('api', false);
             }
+<<<<<<< HEAD
             }else if(evt.name=="setting"){
                 setting = safari.extension.settings;
                 //keybindの設定
@@ -51,5 +60,12 @@ function initAll(){
                 };
                 evt.target.page.dispatchMessage('setting',obj);
             }
+=======
+         }else if(evt.name=="root"){
+                var url = location.href;
+                url = url.replace("global.html","");
+                evt.target.page.dispatchMessage('root', url);
+         }
+>>>>>>> 344176d9d3fceee4591223e7375a56a06c8874ee
         },false);
     }

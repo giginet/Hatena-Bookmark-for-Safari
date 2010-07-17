@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
+<<<<<<< HEAD
 <array>
 	<dict>
 		<key>Title</key>
@@ -131,4 +132,7 @@
 		<string>TextField</string>
 	</dict>
 </array>
+=======
+<array/>
+>>>>>>> 344176d9d3fceee4591223e7375a56a06c8874ee
 </plist>
